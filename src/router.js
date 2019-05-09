@@ -2,20 +2,35 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/views/HelloWorld'
 import HomePage from '@/views/HomePage'
+import test from '@/views/test'
 
 Vue.use(Router)
+const components = {
+    // index:() => import('@/views/index'),
+    // top:() => import('@/components/MyHeader'),
+    // container:() => import('@/components/Container')
+}
 
 export default new Router({
     routes: [
+        {
+            path: '/',
+            redirect: '/test'
+        },
+
         {
             path: '/homepage',
             name: 'homepage',
             component: HomePage
         },
         {
-            path: '/',
+            path: '/helloword',
             name: 'helloword',
             component: HelloWorld
+        },
+        {
+            path: '/test',
+            component: test
         }
     ]
 })
