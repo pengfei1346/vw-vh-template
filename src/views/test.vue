@@ -21,6 +21,11 @@
             product,
             cart,
             info
+        },
+        mounted() {
+            setTimeout(() => {
+                alert(`6666+${8888}`)
+            })
         }
     }
 </script>
